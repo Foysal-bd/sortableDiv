@@ -1,0 +1,49 @@
+.alb-responsive-switcher {
+  width: 2rem;
+  height: 2rem;
+  margin: 2.5rem auto 0;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.alb-responsive-switcher-holder {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #d1d5db;
+  box-sizing: border-box;
+  transition: all 0.15s ease-in-out;
+  box-shadow: 0 0 3px rgba(0, 0, 0, .9);;
+
+  .alb-switcher-btn {
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0);
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.15s ease-in-out;
+    user-select: none;
+    color: #1f2937;
+    font-size: 14px;
+
+    &.alb-active {      
+      height: 2rem;
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    &.alb-focused {
+      color: #3b82f6;
+    }
+  }
+
+  &.open .alb-switcher-btn {
+    height: 2rem;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
